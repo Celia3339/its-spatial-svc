@@ -56,37 +56,17 @@ The health data cannot be distributed. Place the following files in `data/` befo
 
 ## Reproducibility
 
-Open `its-spatial-svc.Rproj` in RStudio, then run the scripts in order:
+Open `its-spatial-svc.Rproj` in RStudio, then run the scripts inside the `codetorun` folder in order:
 
 ```r
-source("scripts/01_fit_models.R")       # ~2 h
-source("scripts/02_trajectories.R")     # ~20 min
-source("scripts/03_simulation.R")       # ~24 h (200 × 3 scenarios)
-source("scripts/04_diagnostics.R")      # <5 min
-source("scripts/05_robustness_checks.R")# ~4 h
+source("scripts/01_fit_models.R")      
+source("scripts/02_trajectories.R")    
+source("scripts/03_simulation.R")      
+source("scripts/04_diagnostics.R")    
+source("scripts/05_robustness_checks.R")
 ```
 
 Set `TEST_MODE <- TRUE` in `scripts/03_simulation.R` to run only 5 replicates and verify the pipeline.
-
----
-
-## Software
-
-| Package | Version tested |
-|---------|---------------|
-| R | 4.3.x |
-| INLA | 24.x |
-| Matrix | ≥ 1.6 |
-| splines | (base) |
-| dplyr / tidyr | ≥ 1.3 / 1.3 |
-| spdep | ≥ 1.3 |
-| igraph | ≥ 2.0 |
-
-Install INLA:
-```r
-install.packages("INLA", repos = c(getOption("repos"),
-  INLA = "https://inla.r-inla-download.org/R/stable"), dep = TRUE)
-```
 
 ---
 
