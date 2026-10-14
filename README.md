@@ -76,8 +76,6 @@ If you use this code, please cite:
 
 > Robles C, Iftimi A. A spatiotemporal Bayesian interrupted time series model with spatially varying coefficients. *Statistics in Medicine* (under review).
 
-A Zenodo DOI will be added upon publication.
-
 ---
 
 ## License
