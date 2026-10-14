@@ -1,4 +1,4 @@
-# Spatiotemporal Bayesian ITS Model with Spatially Varying Coefficient
+# Spatiotemporal Bayesian ITS Model with Spatially Varying Coefficients
 
 **Article:** *A spatiotemporal Bayesian interrupted time series model with spatially varying coefficients: application to fentanyl prescription regulation in the Valencian Community*  
 **Journal:** Statistics in Medicine (under review)  
