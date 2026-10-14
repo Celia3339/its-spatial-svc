@@ -28,7 +28,7 @@ its-spatial-svc/
 │   ├── functions_model.R        # data preparation, priors, formulas, two-stage INLA fit
 │   ├── functions_trajectories.R # posterior trajectory summaries
 │   └── functions_simulation.R   # data-generating mechanism and ADEMP metrics
-├── scripts/
+├── codetorun/
 │   ├── 01_fit_models.R          # fit Poisson and NB models; model comparison table
 │   ├── 02_trajectories.R        # population-average and area-level trajectories
 │   ├── 03_simulation.R          # simulation study (dependence + effect-size scenarios)
@@ -59,14 +59,14 @@ The health data cannot be distributed. Place the following files in `data/` befo
 Open `its-spatial-svc.Rproj` in RStudio, then run the scripts inside the `codetorun` folder in order:
 
 ```r
-source("scripts/01_fit_models.R")      
-source("scripts/02_trajectories.R")    
-source("scripts/03_simulation.R")      
-source("scripts/04_diagnostics.R")    
-source("scripts/05_robustness_checks.R")
+source("codetorun/01_fit_models.R")      
+source("codetorun/02_trajectories.R")    
+source("codetorun/03_simulation.R")      
+source("codetorun/04_diagnostics.R")    
+source("codetorun/05_robustness_checks.R")
 ```
 
-Set `TEST_MODE <- TRUE` in `scripts/03_simulation.R` to run only 5 replicates and verify the pipeline.
+Set `TEST_MODE <- TRUE` in `codetorun/03_simulation.R` to run only 5 replicates and verify the pipeline.
 
 ---
 
