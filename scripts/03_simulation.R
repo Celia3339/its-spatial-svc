@@ -25,7 +25,6 @@ TEST_MODE        <- FALSE    # TRUE: a few replicates to check the pipeline
 S_MAIN           <- if (TEST_MODE) 5L else 200L
 S_EFFECT         <- if (TEST_MODE) 5L else 100L
 RUN_EFFECT_SIZE  <- FALSE
-N_WORKERS        <- 3L       # parallel replicates (Linux/macOS only)
 N_POST_SAMPLE    <- 500L     # posterior samples for the spline covariance
 J_sim            <- 100L     # areas in the simulated subgraph
 T_WEEKS          <- 205L     # the simulation uses the first 205 weeks
@@ -151,7 +150,7 @@ seed_base <- c(A = 1000L, B = 2000L, C = 3000L)
 for (sc in names(scenarios)) {
   run_scenario(sc, S_MAIN, seed_base[[sc]],
                gen_fun    = function() generate_dataset(scenarios[[sc]]),
-               output_dir = OUTPUT_SIM, n_workers = N_WORKERS, n_cores = n_cores)
+               output_dir = OUTPUT_SIM, n_cores = n_cores)
 }
 
 metrics_main <- lapply(setNames(names(scenarios), names(scenarios)), function(sc) {
@@ -179,7 +178,7 @@ if (RUN_EFFECT_SIZE) {
     e <- effect_scenarios[[en]]
     run_scenario(paste0("eff_", en), S_EFFECT, seed_base_eff[[en]],
                  gen_fun    = function() generate_dataset(scenarios$B, effect = e),
-                 output_dir = OUTPUT_SIM, n_workers = N_WORKERS, n_cores = n_cores)
+                 output_dir = OUTPUT_SIM, n_cores = n_cores)
   }
 
   metrics_effect <- lapply(setNames(names(effect_scenarios),
