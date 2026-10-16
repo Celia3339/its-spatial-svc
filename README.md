@@ -15,7 +15,7 @@ This repository contains the full R code for a Bayesian spatiotemporal interrupt
 - An **AR(1)** process for the temporal random effect
 - **Spatially varying coefficients** (SVCs, Besag model) for the immediate level shifts and the post-intervention trajectory spline bases at each of the three interventions
 
-The analysis covers 241 basic health areas of the Valencian Community over 209 weeks (2015–2018), with opioid prescription counts as the outcome.
+The analysis covers 241 basic health areas of the Valencian Community over 209 weeks (2015–2018), with off-label IRF prescription counts as the outcome.
 
 ---
 
@@ -34,9 +34,9 @@ its-spatial-svc/
 │   ├── 03_simulation.R          # simulation study (dependence + effect-size scenarios)
 │   ├── 04_diagnostics.R         # mid-PIT, Pearson residual ACF, Moran's I
 │   └── 05_robustness_checks.R   # overdispersion, Poisson vs NB, temporal structure
-├── data/                        # ← place your input files here (not distributed)
-├── output/                      # fitted models, summaries and figures (git-ignored)
-├── its-spatial-svc.Rproj        # open this in RStudio
+├── data/                        # ← input files
+├── output/                      # fitted models, summaries and figures
+├── its-spatial-svc.Rproj        
 ├── CITATION.cff
 └── LICENSE
 ```
@@ -45,7 +45,7 @@ its-spatial-svc/
 
 ## Data
 
-The health data cannot be distributed. Place the following files in `data/` before running any script:
+The health data cannot be distributed due to privacy policies. Place the following files in `data/` before running any script:
 
 | File | Description |
 |------|-------------|
