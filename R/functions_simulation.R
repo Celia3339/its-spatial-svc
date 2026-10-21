@@ -217,7 +217,7 @@ fit_inla_sim <- function(dat) {
          control.predictor = list(compute = FALSE, link = 1),
          control.inla      = control_inla_sim,
          control.mode      = list(theta = theta_ref, restart = FALSE),
-         inla.mode         = "experimental", verbose = FALSE),
+         inla.mode         = "classic", verbose = FALSE),
     error = function(e) { err2 <<- conditionMessage(e); NULL }
   )
   list(fit = fit2, error = err2, stage = if (is.null(fit2)) 2L else NA_integer_)
